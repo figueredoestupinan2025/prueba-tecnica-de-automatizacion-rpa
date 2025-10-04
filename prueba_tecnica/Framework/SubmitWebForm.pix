@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Nuevo script vacio.</Description>
+  <Id>b3b79ab0-8184-43be-a95a-f93341e56dd7</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>1ee4ca2a-cfe9-407b-aa7b-c3a5aab6bb1b</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>URL</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>https://docs.google.com/forms/d/e/fwjehbfhwefb8237jdbsf/viewform</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId>0</SelectedOptionId>
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Abrir Navegador</Text>
+        <_activityFullName>Activities.Web.LaunchChrome</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i5" i:type="ExecutedStep">
+        <Childs />
+        <Id>9e98d2a4-59a2-4bc1-ab7e-eb52be69d48c</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i6">
+            <PropertyName>CSCode</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:string">using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+// Configurar
+var options = new ChromeOptions();
+var driver = new ChromeDriver(Environment.CurrentDirectory, options);
+
+try
+{
+    // Navegar
+    driver.Navigate().GoToUrl("https://docs.google.com/forms/d/e/TU_FORM_ID/viewform");
+    System.Threading.Thread.Sleep(2000);
+    
+    // Nombre
+    var nombre = driver.FindElement(By.XPath("//input[@aria-label='Nombre del colaborador']"));
+    nombre.SendKeys("Robot RPA");
+    
+    // Fecha
+    string dateStr = DateTime.Now.ToString("yyyy-MM-dd");
+    var fecha = driver.FindElement(By.XPath("//input[@type='date']"));
+    fecha.SendKeys(dateStr);
+    
+    // Comentarios
+    var comentarios = driver.FindElement(By.XPath("//textarea[@aria-label='Comentarios']"));
+    comentarios.SendKeys("Reporte automático");
+    
+    // Subir archivo
+    string excelPath = Path.Combine(Environment.CurrentDirectory, "Reportes", $"Reporte_{dateStr}.xlsx");
+    var upload = driver.FindElement(By.XPath("//input[@type='file']"));
+    upload.SendKeys(excelPath);
+    
+    System.Threading.Thread.Sleep(1000);
+    
+    // Enviar
+    var btnEnviar = driver.FindElement(By.XPath("//span[text()='Enviar']"));
+    btnEnviar.Click();
+    
+    // Esperar confirmación
+    System.Threading.Thread.Sleep(3000);
+    
+    // Captura
+    string evidenciaPath = Path.Combine(Environment.CurrentDirectory, "Evidencias", "formulario_confirmacion.png");
+    Directory.CreateDirectory(Path.GetDirectoryName(evidenciaPath));
+    ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(evidenciaPath);
+    
+    Console.WriteLine($"[Formulario] Enviado y evidencia guardada en {evidenciaPath}");
+}
+finally
+{
+    driver.Quit();
+}</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Llenar el formulario</Text>
+        <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>e5ecdc89-424c-45cb-80ab-b377985ad99d</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>SubmitWebForm.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params />
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params" />
+  <Version i:nil="true" />
+</Script>

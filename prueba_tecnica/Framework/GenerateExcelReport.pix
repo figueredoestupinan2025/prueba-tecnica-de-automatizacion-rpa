@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description>Nuevo script vacio.</Description>
+  <Id>1eee3160-7852-4edd-b72a-2b8ff45c8ef1</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>a5366f49-da4c-468d-a4d1-d67d2f90daec</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>CSCode</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:string">// Conexión
+string cs = "Server=localhost;Database=rpa_productos;UID=root;PWD=123456";
+var conn = new Npgsql.NpgsqlConnection(cs);
+conn.Open();
+
+// Obtener todos los productos
+var productos = new System.Collections.Generic.List&lt;dynamic&gt;();
+var cmd = new Npgsql.NpgsqlCommand("SELECT * FROM productos ORDER BY id", conn);
+using (var reader = cmd.ExecuteReader())
+{
+    while (reader.Read())
+    {
+        productos.Add(new {
+            id = reader.GetInt32(0),
+            title = reader.GetString(1),
+            price = reader.GetDouble(2),
+            category = reader.GetString(3),
+            description = reader.GetString(4),
+            fecha_insercion = reader.GetDateTime(5)
+        });
+    }
+}
+conn.Close();
+
+// Guardar en variable para siguiente paso
+productosData = productos;</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Consultar Base de Datos</Text>
+        <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i5" i:type="ExecutedStep">
+        <Childs />
+        <Id>b64d2121-5767-417c-9505-c1902587de74</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i6">
+            <PropertyName>CSCode</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:string">using OfficeOpenXml;
+
+// Configurar licencia EPPlus (NonCommercial o Commercial según tu caso)
+ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+// Crear archivo
+string dateStr = DateTime.Now.ToString("yyyy-MM-dd");
+string excelPath = Path.Combine(Environment.CurrentDirectory, "Reportes", $"Reporte_{dateStr}.xlsx");
+Directory.CreateDirectory(Path.GetDirectoryName(excelPath));
+
+using (var package = new ExcelPackage())
+{
+    // HOJA 1: Productos
+    var ws1 = package.Workbook.Worksheets.Add("Productos");
+    
+    // Encabezados
+    ws1.Cells[1, 1].Value = "ID";
+    ws1.Cells[1, 2].Value = "Título";
+    ws1.Cells[1, 3].Value = "Precio";
+    ws1.Cells[1, 4].Value = "Categoría";
+    ws1.Cells[1, 5].Value = "Descripción";
+    ws1.Cells[1, 6].Value = "Fecha Inserción";
+    
+    // Datos
+    int row = 2;
+    foreach (var p in productosData)
+    {
+        ws1.Cells[row, 1].Value = p.id;
+        ws1.Cells[row, 2].Value = p.title;
+        ws1.Cells[row, 3].Value = p.price;
+        ws1.Cells[row, 4].Value = p.category;
+        ws1.Cells[row, 5].Value = p.description;
+        ws1.Cells[row, 6].Value = p.fecha_insercion.ToString("yyyy-MM-dd HH:mm:ss");
+        row++;
+    }
+    
+    // Formato
+    ws1.Cells[1, 1, 1, 6].Style.Font.Bold = true;
+    ws1.Cells.AutoFitColumns();
+    
+    // HOJA 2: Resumen
+    var ws2 = package.Workbook.Worksheets.Add("Resumen");
+    
+    // Total productos
+    ws2.Cells[1, 1].Value = "Total de productos:";
+    ws2.Cells[1, 2].Value = productosData.Count;
+    
+    // Precio promedio general
+    double precioPromedio = productosData.Average(p =&gt; p.price);
+    ws2.Cells[2, 1].Value = "Precio promedio general:";
+    ws2.Cells[2, 2].Value = precioPromedio;
+    ws2.Cells[2, 2].Style.Numberformat.Format = "$#,##0.00";
+    
+    // Por categoría
+    var porCategoria = productosData
+        .GroupBy(p =&gt; p.category)
+        .Select(g =&gt; new {
+            categoria = g.Key,
+            cantidad = g.Count(),
+            promedio = g.Average(p =&gt; p.price)
+        })
+        .OrderByDescending(x =&gt; x.cantidad)
+        .ToList();
+    
+    int rowCat = 4;
+    ws2.Cells[rowCat, 1].Value = "Categoría";
+    ws2.Cells[rowCat, 2].Value = "Cantidad";
+    ws2.Cells[rowCat, 3].Value = "Precio Promedio";
+    ws2.Cells[rowCat, 1, rowCat, 3].Style.Font.Bold = true;
+    
+    rowCat++;
+    foreach (var cat in porCategoria)
+    {
+        ws2.Cells[rowCat, 1].Value = cat.categoria;
+        ws2.Cells[rowCat, 2].Value = cat.cantidad;
+        ws2.Cells[rowCat, 3].Value = cat.promedio;
+        ws2.Cells[rowCat, 3].Style.Numberformat.Format = "$#,##0.00";
+        rowCat++;
+    }
+    
+    ws2.Cells.AutoFitColumns();
+    
+    // Guardar
+    package.SaveAs(new System.IO.FileInfo(excelPath));
+}
+
+Console.WriteLine($"[Excel] Generado: {excelPath}");
+excelFilePath = excelPath; // Para siguiente paso</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Generar Excel</Text>
+        <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>54fe059c-0cf3-4536-8023-3f0b57c71cad</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <AutoCloseMode>None</AutoCloseMode>
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>GenerateExcelReport.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params />
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
+    <d2p1:Variable z:Id="i7">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>productosData</d2p1:Name>
+      <d2p1:TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i8">
+      <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>excelFilePath</d2p1:Name>
+      <d2p1:TypeString>System.String</d2p1:TypeString>
+    </d2p1:Variable>
+  </Variables>
+  <Version i:nil="true" />
+</Script>

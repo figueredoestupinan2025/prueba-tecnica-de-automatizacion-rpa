@@ -1,0 +1,1933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RobotizationProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <Dependencies>
+    <ProjectDependency>
+      <Dependencies />
+      <FileName>Newtonsoft.Json.13.0.4.nupkg</FileName>
+      <Hash>8JCB1FdAW681qXP6DFDWvycu1oPyVoxaYgpJ2pUvZSk=</Hash>
+      <Id>Newtonsoft.Json</Id>
+      <MasterUrl i:nil="true" />
+      <Name>Newtonsoft.Json</Name>
+      <ServerUrl>nuget.org</ServerUrl>
+      <Version>13.0.4</Version>
+    </ProjectDependency>
+    <ProjectDependency>
+      <Dependencies>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Logging.Abstractions.8.0.2.nupkg</FileName>
+          <Hash>cHpe8X2BgYa5DzulZfq24rg8O2K5Lmq2OiLhoyAVgJc=</Hash>
+          <Id>Microsoft.Extensions.Logging.Abstractions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Logging.Abstractions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>8.0.2</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2.nupkg</FileName>
+          <Hash>UfLfEQAkXxDaVPC7foE/J3FVEXd31Pu6uQIhTic3JgY=</Hash>
+          <Id>Microsoft.Extensions.DependencyInjection.Abstractions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.DependencyInjection.Abstractions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>8.0.2</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.DiagnosticSource.8.0.1.nupkg</FileName>
+          <Hash>zmwHjcJgKcbkkwepH038QhcnsWMJcHys+PEbFGC0Jgo=</Hash>
+          <Id>System.Diagnostics.DiagnosticSource</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.DiagnosticSource</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>8.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.CompilerServices.Unsafe.6.0.0.nupkg</FileName>
+          <Hash>bEG1PnDp7uKYz/OgLOWs3RWwQSVYm+AnPwVmAmcgp2I=</Hash>
+          <Id>System.Runtime.CompilerServices.Unsafe</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.CompilerServices.Unsafe</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>6.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.Json.8.0.5.nupkg</FileName>
+          <Hash>yKxo54w5odWT6nPruUVsaX53oPRe+gKzGvLnnxtwP68=</Hash>
+          <Id>System.Text.Json</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.Json</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>8.0.5</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.Encodings.Web.8.0.0.nupkg</FileName>
+          <Hash>IUQkQkV9po1LC0QsqrilqwNzPvnc+4eVvq+hCvq8fvE=</Hash>
+          <Id>System.Text.Encodings.Web</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.Encodings.Web</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>8.0.0</Version>
+        </ProjectDependency>
+      </Dependencies>
+      <FileName>Npgsql.9.0.3.nupkg</FileName>
+      <Hash>X3F05GNj3vNVl++VOV5TMYE5dvEe6cx0k+5yWo2Q/+o=</Hash>
+      <Id>Npgsql</Id>
+      <MasterUrl i:nil="true" />
+      <Name>Npgsql</Name>
+      <ServerUrl>nuget.org</ServerUrl>
+      <Version>9.0.3</Version>
+    </ProjectDependency>
+    <ProjectDependency>
+      <Dependencies />
+      <FileName>Npgsql.EntityFrameworkCore.PostgreSQL.10.0.0-rc.1.nupkg</FileName>
+      <Hash>V9CZqwRCDv33evcsTAB+R0Gis6V1mpGkxG2I1bWWCPc=</Hash>
+      <Id>Npgsql.EntityFrameworkCore.PostgreSQL</Id>
+      <MasterUrl i:nil="true" />
+      <Name>Npgsql.EntityFrameworkCore.PostgreSQL</Name>
+      <ServerUrl>nuget.org</ServerUrl>
+      <Version>10.0.0-rc.1</Version>
+    </ProjectDependency>
+    <ProjectDependency>
+      <Dependencies>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Npgsql.EntityFrameworkCore.PostgreSQL.2.0.0-preview1.nupkg</FileName>
+          <Hash>i/ibGTIfxDjFykAFBNLq0lypBg5IpDoNlo7V9fsv9OI=</Hash>
+          <Id>Npgsql.EntityFrameworkCore.PostgreSQL</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Npgsql.EntityFrameworkCore.PostgreSQL</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.EntityFrameworkCore.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>HiWYdciEkEJ9iRuBly20ig2ONLrNOQ/scwMjfLP3c08=</Hash>
+          <Id>Microsoft.EntityFrameworkCore</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.EntityFrameworkCore</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>NETStandard.Library.2.0.0-preview1-25301-01.nupkg</FileName>
+          <Hash>/ws9z41bImW9xodz8VTYaCCE/91Bs2TAIgw4bQK9+bQ=</Hash>
+          <Id>NETStandard.Library</Id>
+          <MasterUrl i:nil="true" />
+          <Name>NETStandard.Library</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-25301-01</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.NETCore.Platforms.1.1.0.nupkg</FileName>
+          <Hash>FeM40ktcObQJk4nMYShB61H/E8B7tIKfl9ObJ0IOcCM=</Hash>
+          <Id>Microsoft.NETCore.Platforms</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.NETCore.Platforms</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Packaging.Tools.1.0.0-preview1-25301-01.nupkg</FileName>
+          <Hash>LE5ptTexKznO/HyWnZ4FhNFNRisl/lpjvz/qAjHikho=</Hash>
+          <Id>Microsoft.Packaging.Tools</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Packaging.Tools</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.0.0-preview1-25301-01</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Caching.Memory.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>kjwtZGBDgzQb8RqMSdqwR+eLWlqOlnIAdbjFO7sfjvY=</Hash>
+          <Id>Microsoft.Extensions.Caching.Memory</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Caching.Memory</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Caching.Abstractions.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>ZJCyzEFUvJEDcFlQYMz5+6HC4JL37LxloMp/p1Ay9Is=</Hash>
+          <Id>Microsoft.Extensions.Caching.Abstractions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Caching.Abstractions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Primitives.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>ZyOn5ADhbDFRiUXt1WOwM3wus9Up5M14BY1wBZqgsOM=</Hash>
+          <Id>Microsoft.Extensions.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>Yg+E5K10i8tvC/IO1xUXAlA0G/7rsiNAj5ZoBjx+y+0=</Hash>
+          <Id>Microsoft.Extensions.DependencyInjection.Abstractions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.DependencyInjection.Abstractions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ComponentModel.4.3.0.nupkg</FileName>
+          <Hash>i00uujMO4JEDIEPKLmdLY3QJ6vdSpw6Gh9oOzkFYBiU=</Hash>
+          <Id>System.ComponentModel</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ComponentModel</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.4.3.0.nupkg</FileName>
+          <Hash>51813WXpBIsuA6fUtE5XaRQjcWdQ2/lmEokJt97u0Rg=</Hash>
+          <Id>System.Runtime</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.NETCore.Targets.1.1.0.nupkg</FileName>
+          <Hash>0AqQ2gMS8iNlYkrD+BxtIg7cXMnr9xZHtKAuN4bjfaQ=</Hash>
+          <Id>Microsoft.NETCore.Targets</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.NETCore.Targets</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Options.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>uxnEAenp3vxyFglhHprY0tRtIy3gh28ig41qh1X4oFs=</Hash>
+          <Id>Microsoft.Extensions.Options</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Options</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.DependencyInjection.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>g2MOwBJO+s3/OxlSky+CC/DflslxXrmiYOrGwq9Yo9E=</Hash>
+          <Id>Microsoft.Extensions.DependencyInjection</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.DependencyInjection</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Logging.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>gQ9DGBbA1+QFBf4mXnFaBpgVz7PFTl9VmkKonPpxrN4=</Hash>
+          <Id>Microsoft.Extensions.Logging</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Logging</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Logging.Abstractions.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>Asgx+uxk9piToGY2qL0IpcrlHmnoChpjYk1fT6kQuZ0=</Hash>
+          <Id>Microsoft.Extensions.Logging.Abstractions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Logging.Abstractions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Configuration.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>gKKyIHH5hb/MC4KqZ8I4XeUmHUg66p9kXOJVDSrg9W0=</Hash>
+          <Id>Microsoft.Extensions.Configuration</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Configuration</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Extensions.Configuration.Abstractions.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>qwoNMpQyHG4+usEOUGBcBwOfbw1GpETtJA167D++tFo=</Hash>
+          <Id>Microsoft.Extensions.Configuration.Abstractions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Extensions.Configuration.Abstractions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Remotion.Linq.2.1.1.nupkg</FileName>
+          <Hash>3LoeSPboLydzo7LeWhwH2rOSoIwTsgkJ8LL/AWQ2SL4=</Hash>
+          <Id>Remotion.Linq</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Remotion.Linq</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.1.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.4.0.11.nupkg</FileName>
+          <Hash>puoFMkx4Z55C1XPxNw3np8nzNGjH+G24j43yTIsDRL0=</Hash>
+          <Id>System.Collections</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.NETCore.Platforms.1.0.1.nupkg</FileName>
+          <Hash>mZotlGZqtrqDSoBrZhsxFe6fuOv5/BIo0w2Z2x0zVAU=</Hash>
+          <Id>Microsoft.NETCore.Platforms</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.NETCore.Platforms</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.NETCore.Targets.1.0.1.nupkg</FileName>
+          <Hash>lxxw/Gy32xHi0fLgFWNj4YTFBSBkjx5l6ucmbTyf7V4=</Hash>
+          <Id>Microsoft.NETCore.Targets</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.NETCore.Targets</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.4.1.0.nupkg</FileName>
+          <Hash>FViNGM/4oWtlP6w0JC0vJU+k9efLKZ+yaXrnEeabDQo=</Hash>
+          <Id>System.Runtime</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Debug.4.0.11.nupkg</FileName>
+          <Hash>P+rSQJVoN6M56jQbs76kZ9G3mAWFdtF27P/RijN8sj4=</Hash>
+          <Id>System.Diagnostics.Debug</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Debug</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Linq.4.1.0.nupkg</FileName>
+          <Hash>ZQpFtYw5N1F1aX0jUK3Tw+XvM5tnlnshkTCNtfVA794=</Hash>
+          <Id>System.Linq</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Linq</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Resources.ResourceManager.4.0.1.nupkg</FileName>
+          <Hash>cZ2/3/fczLjEpn6j3xkgQV9ouOVjy4Kisgw5xWw9kSw=</Hash>
+          <Id>System.Resources.ResourceManager</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Resources.ResourceManager</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Globalization.4.0.11.nupkg</FileName>
+          <Hash>rbSgc2PIEc2c2rN6LK3qCREAX3DqA2Nq1WcLrZYsDBw=</Hash>
+          <Id>System.Globalization</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Globalization</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.4.1.0.nupkg</FileName>
+          <Hash>idZHGH2Yl/hha1CM4VzLhsaR8Ljo/rV7TYe7mwRJSMs=</Hash>
+          <Id>System.Reflection</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.4.1.0.nupkg</FileName>
+          <Hash>V6oyQFwWb8NvGxAwvzWnhPxy9dKOfj/XBM3tEC5aHrw=</Hash>
+          <Id>System.IO</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.Encoding.4.0.11.nupkg</FileName>
+          <Hash>PEailOvG05CVgPTyKLtpAgRydlSHmtd5K0Y8GSHY2Lc=</Hash>
+          <Id>System.Text.Encoding</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.Encoding</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Tasks.4.0.11.nupkg</FileName>
+          <Hash>5SLxzFg1df6bTm2t09xeI01wa5qQglqUwwJNlQPJIVs=</Hash>
+          <Id>System.Threading.Tasks</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Tasks</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Primitives.4.0.1.nupkg</FileName>
+          <Hash>SFSfpWEyCBMAOerrMCOiKnpT+UAWTvRcmoRquJR6Vq0=</Hash>
+          <Id>System.Reflection.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.Extensions.4.1.0.nupkg</FileName>
+          <Hash>X7DZ5CbPY7jHs20YZ7bmcXs9B5Mxptu/HnBUvUnNhGc=</Hash>
+          <Id>System.Runtime.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Linq.Expressions.4.1.0.nupkg</FileName>
+          <Hash>7zqB+FXgkvhtlBzpcZyd81xczWP0D3uWssyAGw3t7b4=</Hash>
+          <Id>System.Linq.Expressions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Linq.Expressions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ObjectModel.4.0.12.nupkg</FileName>
+          <Hash>MudZ/KYcvYsn2cST3EE049mLikrNkmE7QoUoYKKby+s=</Hash>
+          <Id>System.ObjectModel</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ObjectModel</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.12</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.4.0.11.nupkg</FileName>
+          <Hash>mob1Zv3qLQhQ1/xOLXZmYqpniNUMCfn02n8ZkaAhqac=</Hash>
+          <Id>System.Threading</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Emit.4.0.1.nupkg</FileName>
+          <Hash>F1MvYoQWHCY89/O4JBwswogitqVvKuVfILFqA7dmuHk=</Hash>
+          <Id>System.Reflection.Emit</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Emit</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Emit.ILGeneration.4.0.1.nupkg</FileName>
+          <Hash>YG+eJBG5P+5adsHiw/lhJwvREnvdHw6CJyS8ZV4Ujd0=</Hash>
+          <Id>System.Reflection.Emit.ILGeneration</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Emit.ILGeneration</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Emit.Lightweight.4.0.1.nupkg</FileName>
+          <Hash>uVvNOnL64CPqsgZP2OLqNmxdkZl6Q0fTmKmv9gcBi+g=</Hash>
+          <Id>System.Reflection.Emit.Lightweight</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Emit.Lightweight</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Extensions.4.0.1.nupkg</FileName>
+          <Hash>NsfmzM9G/sN3H8X2cdnheTGRsh7zbRzvegnjDzDH/FQ=</Hash>
+          <Id>System.Reflection.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.TypeExtensions.4.1.0.nupkg</FileName>
+          <Hash>R0YZowmFda+xzKNR4kKg7neFoE30KfZwp/IwfRSKVK4=</Hash>
+          <Id>System.Reflection.TypeExtensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.TypeExtensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Linq.Queryable.4.0.1.nupkg</FileName>
+          <Hash>XOFRO+lyoxsWtIUJfg5JCqv9Gx35ASOc94WIR8ZMVoY=</Hash>
+          <Id>System.Linq.Queryable</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Linq.Queryable</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.Immutable.1.3.1.nupkg</FileName>
+          <Hash>areGRq/dO08KhxiWuAK+cWAjOWYtuB1R9zGXLvIqwZw=</Hash>
+          <Id>System.Collections.Immutable</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections.Immutable</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.3.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.4.3.0.nupkg</FileName>
+          <Hash>afY7VUtD6w/5mYqrce8kQrvDIfS2GXDINDh73IjxJKc=</Hash>
+          <Id>System.Collections</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Debug.4.3.0.nupkg</FileName>
+          <Hash>fkA79SjPbSeiEcrbbUsb70u9B7wqbsdM9s1LnoKj0gM=</Hash>
+          <Id>System.Diagnostics.Debug</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Debug</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Globalization.4.3.0.nupkg</FileName>
+          <Hash>caL0pRmFSEsaoeZeWN5BTQtGrAtaQPwFi8YOZPZG5rI=</Hash>
+          <Id>System.Globalization</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Globalization</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Linq.4.3.0.nupkg</FileName>
+          <Hash>R5uiSL3l6a3XrXSSL6jz+q/PcyVQzEAByiuXZNSqD/A=</Hash>
+          <Id>System.Linq</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Linq</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Resources.ResourceManager.4.3.0.nupkg</FileName>
+          <Hash>idiOD93xbbrbwwSnD4mORA9RYi/D/U48eRUsn/WnWGo=</Hash>
+          <Id>System.Resources.ResourceManager</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Resources.ResourceManager</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.4.3.0.nupkg</FileName>
+          <Hash>NQSZRpZLvtPWDlvmMIdGxcVuyUnw92ZURo0hXsEshXY=</Hash>
+          <Id>System.Reflection</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.4.3.0.nupkg</FileName>
+          <Hash>ruynQHekFP5wPrDiVyhNiRIXeZ/I9NpjK5pU+HPDiRY=</Hash>
+          <Id>System.IO</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.Encoding.4.3.0.nupkg</FileName>
+          <Hash>GctHVGLZAa/rqkBNhsBGnsiWdKyv6VDubYpGkuOkBLg=</Hash>
+          <Id>System.Text.Encoding</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.Encoding</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Tasks.4.3.0.nupkg</FileName>
+          <Hash>Z5rXfJ1EXp3G32IKZGiZ6koMjRu0n8C1NGrwpdIen4w=</Hash>
+          <Id>System.Threading.Tasks</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Tasks</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Primitives.4.3.0.nupkg</FileName>
+          <Hash>5ogwWB4vlQTl3jjk1xjniG2ozbFIjZTL9ug0usZQuBM=</Hash>
+          <Id>System.Reflection.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.Extensions.4.3.0.nupkg</FileName>
+          <Hash>wLDHmozr84v1W2zYCWYxxj0FR0JDYHSVRaRuDm0bd/o=</Hash>
+          <Id>System.Runtime.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.4.3.0.nupkg</FileName>
+          <Hash>ZDQ3dR4pzVwmaqBg4hacZaVenQ/3yAF/uV7BXZXjiWc=</Hash>
+          <Id>System.Threading</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ComponentModel.Annotations.4.3.0.nupkg</FileName>
+          <Hash>zQVRu6SnLS7aKetDaxvo7zAHWLOB7K/mtgs/uaQtYqk=</Hash>
+          <Id>System.ComponentModel.Annotations</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ComponentModel.Annotations</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Extensions.4.3.0.nupkg</FileName>
+          <Hash>mMOCYzUenjd4rWIfq7zIX9PFYk/daUyF0A8l1hbydAk=</Hash>
+          <Id>System.Reflection.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.RegularExpressions.4.3.0.nupkg</FileName>
+          <Hash>VLCk1D1kcN2wbAe3d0YQM/PqCsPHOuqlBY1yd2Yo+K0=</Hash>
+          <Id>System.Text.RegularExpressions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.RegularExpressions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Interactive.Async.3.1.1.nupkg</FileName>
+          <Hash>0Cof7GZZqLkREQWbG/9+bn5riOtQFv2bFktYgB8QOA4=</Hash>
+          <Id>System.Interactive.Async</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Interactive.Async</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>3.1.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>NETStandard.Library.1.6.0.nupkg</FileName>
+          <Hash>ExWI1EKDCRishcfAeHVS/RoJphqSqohmJIC/wz3ZtVo=</Hash>
+          <Id>NETStandard.Library</Id>
+          <MasterUrl i:nil="true" />
+          <Name>NETStandard.Library</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.6.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Win32.Primitives.4.0.1.nupkg</FileName>
+          <Hash>B4t5El/ViBdxALMcpZulewc4j/3SIXf71HhJWhm4Ctk=</Hash>
+          <Id>Microsoft.Win32.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Win32.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.AppContext.4.1.0.nupkg</FileName>
+          <Hash>v6YfyfrKmhww+EYHUq6cwYUMj00MQ6SOfJtcGVRlYzs=</Hash>
+          <Id>System.AppContext</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.AppContext</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.Concurrent.4.0.12.nupkg</FileName>
+          <Hash>zIEM7AB4SyE9u6G8+o+gCLLwkgi6+3rHQVPdn/dEwB8=</Hash>
+          <Id>System.Collections.Concurrent</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections.Concurrent</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.12</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Tracing.4.1.0.nupkg</FileName>
+          <Hash>JA0jJcLbU3zh52ub3zweob2EVHvxOqiC6SCYHrY5WbQ=</Hash>
+          <Id>System.Diagnostics.Tracing</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Tracing</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Console.4.0.0.nupkg</FileName>
+          <Hash>jtZfT/TpJtLisV/y5Mk3IfCpE79zwhBYXtyGP9jC3Xo=</Hash>
+          <Id>System.Console</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Console</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Tools.4.0.1.nupkg</FileName>
+          <Hash>vSBqTbmWXylvRa37aWyktym+gOpsvH43mwr6A962k6U=</Hash>
+          <Id>System.Diagnostics.Tools</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Tools</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Globalization.Calendars.4.0.1.nupkg</FileName>
+          <Hash>EJN3LbN+b0O9Dr2eg7kfThCYpne0iJ/H/GIyUTNVYC8=</Hash>
+          <Id>System.Globalization.Calendars</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Globalization.Calendars</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.Compression.4.1.0.nupkg</FileName>
+          <Hash>UT4KEfJNZOk7b4X0AqLFUsqfHu6myVH/BhbRKYc+1Uc=</Hash>
+          <Id>System.IO.Compression</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.Compression</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.4.0.0.nupkg</FileName>
+          <Hash>bmaM0ovT4X4aqDJOR255Yda/u3fmHZskU++lMnsy894=</Hash>
+          <Id>runtime.native.System</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.IO.Compression.4.1.0.nupkg</FileName>
+          <Hash>085JrZxNEwIHdBWKKKFsh1JzpF0AblvrUsz5T8kH4jQ=</Hash>
+          <Id>runtime.native.System.IO.Compression</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.IO.Compression</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.Handles.4.0.1.nupkg</FileName>
+          <Hash>j2QgVO9ZOjv7D1het98CoFpjoYgxjupuIhuBUmLLH7w=</Hash>
+          <Id>System.Runtime.Handles</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.Handles</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.InteropServices.4.1.0.nupkg</FileName>
+          <Hash>QceAYlJvkPRJc/+5jR+wQpNNI3aqGySWWSO30e/FfQY=</Hash>
+          <Id>System.Runtime.InteropServices</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.InteropServices</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.Compression.ZipFile.4.0.1.nupkg</FileName>
+          <Hash>An0Twb9JODl/nuVm6MR0kJ3aj4WxGpI/1/vVp5b94kA=</Hash>
+          <Id>System.IO.Compression.ZipFile</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.Compression.ZipFile</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Buffers.4.0.0.nupkg</FileName>
+          <Hash>+YUymoyS0O+xVyF2+LiAdZlMww8nofPN4ja9ylYqRo8=</Hash>
+          <Id>System.Buffers</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Buffers</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.FileSystem.4.0.1.nupkg</FileName>
+          <Hash>4VKXFgcGYCTWVXjAlniAVq0dO3o5s8KHylg2wg2/7k0=</Hash>
+          <Id>System.IO.FileSystem</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.FileSystem</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.FileSystem.Primitives.4.0.1.nupkg</FileName>
+          <Hash>IpigKMomqb6pmYWkrlf0ZdpILtRluX2cX5sOKVW0Feg=</Hash>
+          <Id>System.IO.FileSystem.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.FileSystem.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Http.4.1.0.nupkg</FileName>
+          <Hash>y6PnGuObJvOkhl9CXNFJQcV3SXuEz5yRLOCxGGTEucQ=</Hash>
+          <Id>System.Net.Http</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Http</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.Net.Http.4.0.1.nupkg</FileName>
+          <Hash>5nWnTQrA1T6t9r8MqIiV4yTNu+IH0of2OX1qteoS+8E=</Hash>
+          <Id>runtime.native.System.Net.Http</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.Net.Http</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.Security.Cryptography.4.0.0.nupkg</FileName>
+          <Hash>6Q8eYzC32BbGIiTHoQaE6B3cD81vYQcH5SCswYRSp0w=</Hash>
+          <Id>runtime.native.System.Security.Cryptography</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.Security.Cryptography</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.DiagnosticSource.4.0.0.nupkg</FileName>
+          <Hash>dYh9UoFesuGcHY+ewsI+z2WnNy+bwHPsHQ3t85cbzNg=</Hash>
+          <Id>System.Diagnostics.DiagnosticSource</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.DiagnosticSource</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Globalization.Extensions.4.0.1.nupkg</FileName>
+          <Hash>zLtkPryJwqTGcJqMC6zoMMvMrT+aAL5GoumjmMtqUEI=</Hash>
+          <Id>System.Globalization.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Globalization.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Primitives.4.0.11.nupkg</FileName>
+          <Hash>2YSijNhCdw/ZU2yfH7vE+ReA8pgxRCXPnWr+ab36v4M=</Hash>
+          <Id>System.Net.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Algorithms.4.2.0.nupkg</FileName>
+          <Hash>BelNIpEyToEp/VYKnje/q1P7KNEpQNtOzGPU18pLGpE=</Hash>
+          <Id>System.Security.Cryptography.Algorithms</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Algorithms</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.2.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.Numerics.4.0.1.nupkg</FileName>
+          <Hash>1pJt5ZGxLPTX1mjOi8qZPXyyOMkYV0NstoUCv91HYPg=</Hash>
+          <Id>System.Runtime.Numerics</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.Numerics</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Encoding.4.0.0.nupkg</FileName>
+          <Hash>ZO7ha39J5uHkIF2RoEKv/bW/bLbVvYMO4+rWyYsKHik=</Hash>
+          <Id>System.Security.Cryptography.Encoding</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Encoding</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Primitives.4.0.0.nupkg</FileName>
+          <Hash>sEdPftfTxQd/8DpdpqUZC2XWC0SjVCPqAkEleLl17EQ=</Hash>
+          <Id>System.Security.Cryptography.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.OpenSsl.4.0.0.nupkg</FileName>
+          <Hash>mLijAozynzjiOMyh2P5BHcfVq3Ovd0T/phG08SIbXZs=</Hash>
+          <Id>System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.X509Certificates.4.1.0.nupkg</FileName>
+          <Hash>sBUUhJP+yYDXvcjNMKqNpn8yzGUpVABwK9vVUvYKjzI=</Hash>
+          <Id>System.Security.Cryptography.X509Certificates</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.X509Certificates</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Cng.4.2.0.nupkg</FileName>
+          <Hash>7F+m3HnmBsgE4xWF8FeCGlaEgQM3drqA6HEaQr6MEoU=</Hash>
+          <Id>System.Security.Cryptography.Cng</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Cng</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.2.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Csp.4.0.0.nupkg</FileName>
+          <Hash>WHyR6vVK3zaT4De7jgQFUar1P5fiX9ECwiVkJDFFm7M=</Hash>
+          <Id>System.Security.Cryptography.Csp</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Csp</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Sockets.4.1.0.nupkg</FileName>
+          <Hash>muK7oXIX7ykqhXskuUt0KX6Hzg5VogJhUS0JiOB2BY0=</Hash>
+          <Id>System.Net.Sockets</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Sockets</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.InteropServices.RuntimeInformation.4.0.0.nupkg</FileName>
+          <Hash>5j53amb76A3SPiE3B0llT2XPx058+CgE7OXL4bLalT4=</Hash>
+          <Id>System.Runtime.InteropServices.RuntimeInformation</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.InteropServices.RuntimeInformation</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.Encoding.Extensions.4.0.11.nupkg</FileName>
+          <Hash>+kf7J3dEhgCbnCM5vHYlsTm5/R/Ud0Jr6elpHm922iI=</Hash>
+          <Id>System.Text.Encoding.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.Encoding.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.RegularExpressions.4.1.0.nupkg</FileName>
+          <Hash>x6OQN6MCN7S0fJ6EFTfv4rczdUWjwuWE9QQ0P6fbh9c=</Hash>
+          <Id>System.Text.RegularExpressions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.RegularExpressions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.1.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Timer.4.0.1.nupkg</FileName>
+          <Hash>5lU6zt1O9JDSPr2KAHw4BYgysHnt0yyZrMNa5IIjxZY=</Hash>
+          <Id>System.Threading.Timer</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Timer</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Xml.ReaderWriter.4.0.11.nupkg</FileName>
+          <Hash>haZAFFQ9Sl2DhfvEbdx2YRqKEoxNMU5STaqpMmXw0zA=</Hash>
+          <Id>System.Xml.ReaderWriter</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Xml.ReaderWriter</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Tasks.Extensions.4.0.0.nupkg</FileName>
+          <Hash>+YdcPkMhZhRbMZHnfsDwpNbUkr31X7pQFGxXYcAPZbE=</Hash>
+          <Id>System.Threading.Tasks.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Tasks.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Xml.XDocument.4.0.11.nupkg</FileName>
+          <Hash>KPz1kxe0RUBM+aoktJ/f9p51GudMERU8Pmwm//HdlFg=</Hash>
+          <Id>System.Xml.XDocument</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Xml.XDocument</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.0.11</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ValueTuple.4.3.0.nupkg</FileName>
+          <Hash>tkMwiobmGQn/t8LDqpkM+Q7XJOebEl3bwVf11d2ZR4g=</Hash>
+          <Id>System.ValueTuple</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ValueTuple</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Npgsql.3.2.2.nupkg</FileName>
+          <Hash>nLioPXyQO+JDpBshVdVstJZgTrUIBc3YYpSaNiGSJOs=</Hash>
+          <Id>Npgsql</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Npgsql</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>3.2.2</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Security.4.3.0.nupkg</FileName>
+          <Hash>B7laE1z1+ldbo6JkjlDjZynG5JiMZ/3uNHPHMP6LRak=</Hash>
+          <Id>System.Net.Security</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Security</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Win32.Primitives.4.3.0.nupkg</FileName>
+          <Hash>mBNDmPXNTW54XLnPAUwBRvkIORFM7/j0D0I2SyQPDEg=</Hash>
+          <Id>Microsoft.Win32.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Win32.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.4.3.0.nupkg</FileName>
+          <Hash>ZBZaodnjvLXATWpXXakFgcy6P+gjhshFXmglrL5xD5Y=</Hash>
+          <Id>runtime.native.System</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.Net.Security.4.3.0.nupkg</FileName>
+          <Hash>I8vYld/7WtU2/rrD4XfSRgpO/DY3qXghG14VQjiU2DY=</Hash>
+          <Id>runtime.native.System.Net.Security</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.Net.Security</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>Jy01KhtcCl2wjMpZWH+X3fhHcVn+SyllWFY8zWlz/6I=</Hash>
+          <Id>runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>LXUPLX3DJxsU1Pd3UwjO1PO9NM2elNEDXeu2Mu/vNps=</Hash>
+          <Id>runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>qeSqaUI80+lqw5MK4vMpmO0CZaqrmYktwp6L+vQAb0I=</Hash>
+          <Id>runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>SrHqT9wrCBsxILWtaJgGKd6Odmxm8/Mh7Kh0CUkZVzA=</Hash>
+          <Id>runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>wyv00gdlqf8ckxEdV7E+Ql9hJIoPcmYEuyeWb5Oz3mM=</Hash>
+          <Id>runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>zi+b4sCFrA9QBiSGDD7xPV27r3iHGlV99gpyVUjRmc4=</Hash>
+          <Id>runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>gybQU6mPgaWV3rBG2dbH6tT3tBq8mgze3PROdsuWnX0=</Hash>
+          <Id>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>VsP72GVveWnGUvS/vjOQLv1U80H2K8nZ4fDAmI61Hm4=</Hash>
+          <Id>runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>4yKGa/IrNCKuQ3zaDzILdNPD32bNdy6xr5gdJigyF5g=</Hash>
+          <Id>runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>HmdJhhRsiVoOOCcUvAwdjpMRiyuSwdcgEv2j9hxi+Zc=</Hash>
+          <Id>runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>pVFUKuPPIx0edQKjzRon3zKq8zhzHEzko/lc01V/jdw=</Hash>
+          <Id>runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.Concurrent.4.3.0.nupkg</FileName>
+          <Hash>KMY5DfJnDeIsa13DpqvyN8NkReZEMAFnlmNglVoFIXI=</Hash>
+          <Id>System.Collections.Concurrent</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections.Concurrent</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Tracing.4.3.0.nupkg</FileName>
+          <Hash>hCETZpHHGVhPYvb4C0fh4zs+8zv4GPoixagkLZjpa9Q=</Hash>
+          <Id>System.Diagnostics.Tracing</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Tracing</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Globalization.Extensions.4.3.0.nupkg</FileName>
+          <Hash>mmJWA27T0GRVuFP9/sj+4TrR4GJWrzNIk2PDrbr7RQk=</Hash>
+          <Id>System.Globalization.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Globalization.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.InteropServices.4.3.0.nupkg</FileName>
+          <Hash>8sDH+WUJfCR+7e4nfpftj/+lstEiZixWUBueR2zmHgI=</Hash>
+          <Id>System.Runtime.InteropServices</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.InteropServices</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.Handles.4.3.0.nupkg</FileName>
+          <Hash>KJ5aXoGpB56Y6+iepBkdpx/AfaJDAitx4vrkLqR7gms=</Hash>
+          <Id>System.Runtime.Handles</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.Handles</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Primitives.4.3.0.nupkg</FileName>
+          <Hash>MY7Z6vOtFMbEKaLW9nOSZeAjcWpwCtdO7/W1mkGZBzE=</Hash>
+          <Id>System.Net.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Claims.4.3.0.nupkg</FileName>
+          <Hash>Fua/rDwAqq4UByRVomAxMPmDBGd5eImRqHVQIeSxbks=</Hash>
+          <Id>System.Security.Claims</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Claims</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Principal.4.3.0.nupkg</FileName>
+          <Hash>rjudVUHdo8pNJg2EVEn0XxxwNo5h2EaYo+QboPkXlYk=</Hash>
+          <Id>System.Security.Principal</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Principal</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Algorithms.4.3.0.nupkg</FileName>
+          <Hash>tAJvNSlczYBJ3Ed24Ae27a55tq/n4D3fubNQdwcKWA8=</Hash>
+          <Id>System.Security.Cryptography.Algorithms</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Algorithms</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.Security.Cryptography.Apple.4.3.0.nupkg</FileName>
+          <Hash>2IhBv0i6pTcOyr8FFIyfPEaaCHUmJZ8DYwLUwJ+5waw=</Hash>
+          <Id>runtime.native.System.Security.Cryptography.Apple</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.Security.Cryptography.Apple</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple.4.3.0.nupkg</FileName>
+          <Hash>serkd4A7F6eciPiPJtUyJyxzdAtupEcWIZQ9nptEzIM=</Hash>
+          <Id>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.Numerics.4.3.0.nupkg</FileName>
+          <Hash>P5jHCgMbgFMYiONvzmaKFeOqcAIDPu/U8bOVrNPYKqc=</Hash>
+          <Id>System.Runtime.Numerics</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.Numerics</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Encoding.4.3.0.nupkg</FileName>
+          <Hash>Yuge89N6M+NcblcvXMeyHZ6kZDfwBv3LPMDiF8HhJss=</Hash>
+          <Id>System.Security.Cryptography.Encoding</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Encoding</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Primitives.4.3.0.nupkg</FileName>
+          <Hash>fnFi7B3SnVj5a+BbgXnbjnGNvWrCEU6Hp/wjsjWz318=</Hash>
+          <Id>System.Security.Cryptography.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.OpenSsl.4.3.0.nupkg</FileName>
+          <Hash>DL+D2sc2JrQiB4oAcUggTFyD8w3aLEjJfod5JPe+Oz4=</Hash>
+          <Id>System.Security.Cryptography.OpenSsl</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.OpenSsl</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.X509Certificates.4.3.0.nupkg</FileName>
+          <Hash>MG3V/owDh273GCUPsGGraNwaVpcydupl3EtPXj6TVG0=</Hash>
+          <Id>System.Security.Cryptography.X509Certificates</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.X509Certificates</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.Net.Http.4.3.0.nupkg</FileName>
+          <Hash>c556PyheRwpYhweBjSfIwEyZHnAUB8jWioyKEcp/2dg=</Hash>
+          <Id>runtime.native.System.Net.Http</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.Net.Http</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Globalization.Calendars.4.3.0.nupkg</FileName>
+          <Hash>uNOD0EOVFgnS2fMKvMiEtI9aOw00+Pfy/H+qucAQlPc=</Hash>
+          <Id>System.Globalization.Calendars</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Globalization.Calendars</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.FileSystem.4.3.0.nupkg</FileName>
+          <Hash>vNIYnvlayuVj0WfRfYKpDrhDptlhp1pN8CYmlVd2TXw=</Hash>
+          <Id>System.IO.FileSystem</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.FileSystem</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.FileSystem.Primitives.4.3.0.nupkg</FileName>
+          <Hash>LMnfg8Vwavs9cMnq9nNH8IWtAtSfk0/Fy4s4Rt9r1kg=</Hash>
+          <Id>System.IO.FileSystem.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.FileSystem.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Cng.4.3.0.nupkg</FileName>
+          <Hash>u17vy6wNhqok91SrVLno2M1EzLHZm6VMca85xbVChsw=</Hash>
+          <Id>System.Security.Cryptography.Cng</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Cng</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Cryptography.Csp.4.3.0.nupkg</FileName>
+          <Hash>oefdTU/Z2PWU9nlat8uiRDGq/PGZoSPRgkML11pmvPQ=</Hash>
+          <Id>System.Security.Cryptography.Csp</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Cryptography.Csp</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.ThreadPool.4.3.0.nupkg</FileName>
+          <Hash>wW0QdvssRoaOfQLazTGSnwYTurE4R8FxDx70pYkL+gg=</Hash>
+          <Id>System.Threading.ThreadPool</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.ThreadPool</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Tasks.Extensions.4.3.0.nupkg</FileName>
+          <Hash>X2hQ5j+fxcmnm88Le/kSavjiGOmkcumBGTZKBLvorPc=</Hash>
+          <Id>System.Threading.Tasks.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Tasks.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ComponentModel.TypeConverter.4.3.0.nupkg</FileName>
+          <Hash>PSDiPYt8PgTdTUBz+GH6lHCaM1YgfObneHnZsc8Fz54=</Hash>
+          <Id>System.ComponentModel.TypeConverter</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ComponentModel.TypeConverter</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.NonGeneric.4.3.0.nupkg</FileName>
+          <Hash>8/yZmD4jjvq7m68SPkJZLBQ79jOTOyT5lyzX4SCYAx8=</Hash>
+          <Id>System.Collections.NonGeneric</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections.NonGeneric</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Collections.Specialized.4.3.0.nupkg</FileName>
+          <Hash>QNg0JJNx+zXMQ26MJRPzH7THdtqjrNtGLUgaR1SdvOk=</Hash>
+          <Id>System.Collections.Specialized</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Collections.Specialized</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ComponentModel.Primitives.4.3.0.nupkg</FileName>
+          <Hash>IOMJleuIBppmP4ECB3uftbdcgL7CCd56+oAD/Sqrbus=</Hash>
+          <Id>System.ComponentModel.Primitives</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ComponentModel.Primitives</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.TypeExtensions.4.3.0.nupkg</FileName>
+          <Hash>4U4/XNQAnddgQIHIJq3P2T80hN0oPdU2uCeghsDTWng=</Hash>
+          <Id>System.Reflection.TypeExtensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.TypeExtensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Thread.4.3.0.nupkg</FileName>
+          <Hash>pMs6RNFC3nQOGz9EqIcyWmO8YLaqay+q/Qde5hqPXXg=</Hash>
+          <Id>System.Threading.Thread</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Thread</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.NetworkInformation.4.3.0.nupkg</FileName>
+          <Hash>b9GMHg4XvlzuMy3XKFPA78WDmy1+AFLujbiXNjDuIPA=</Hash>
+          <Id>System.Net.NetworkInformation</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.NetworkInformation</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Sockets.4.3.0.nupkg</FileName>
+          <Hash>il7dr5VT/QWDg/0cuh+4Es2u8LY//+qqiY9BZmYxSus=</Hash>
+          <Id>System.Net.Sockets</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Sockets</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Security.Principal.Windows.4.3.0.nupkg</FileName>
+          <Hash>mbdLVUcEwe78p3ZnB6jYsizNEqxMaCAWI3tEQNhRQAE=</Hash>
+          <Id>System.Security.Principal.Windows</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Security.Principal.Windows</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Overlapped.4.3.0.nupkg</FileName>
+          <Hash>tUX099CChkqWiHyP/1e4jGYzZAjgIthMOdMmiOGMUNk=</Hash>
+          <Id>System.Threading.Overlapped</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Overlapped</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>NETStandard.Library.1.6.1.nupkg</FileName>
+          <Hash>iNan1ix7RtncGWC9AjAZ2sk70DoxOsmEOgQ10fXm4Pw=</Hash>
+          <Id>NETStandard.Library</Id>
+          <MasterUrl i:nil="true" />
+          <Name>NETStandard.Library</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>1.6.1</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.AppContext.4.3.0.nupkg</FileName>
+          <Hash>yg95LNQOwFlA1tWxXdQkVyJqT4AnoDc+ACmrNvzGiZg=</Hash>
+          <Id>System.AppContext</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.AppContext</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Console.4.3.0.nupkg</FileName>
+          <Hash>Xh3PPBZr0pDbDaK8AEHbdGz7ePK6Yi1ZyRWI1JM6mbo=</Hash>
+          <Id>System.Console</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Console</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Tools.4.3.0.nupkg</FileName>
+          <Hash>gVOv1SK6Ape0FQhCVlNOd9cvQKBvMxRX9K0JPVi8w0Y=</Hash>
+          <Id>System.Diagnostics.Tools</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Tools</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.Compression.4.3.0.nupkg</FileName>
+          <Hash>f5PrQlQgj5Xj2ZnHxXW8XiOivaBvfqDao9Sb6AVinyA=</Hash>
+          <Id>System.IO.Compression</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.Compression</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>runtime.native.System.IO.Compression.4.3.0.nupkg</FileName>
+          <Hash>DWnXs4vlKoU6WxxvCArTJupV6sX3iBbZh8SbqfHace8=</Hash>
+          <Id>runtime.native.System.IO.Compression</Id>
+          <MasterUrl i:nil="true" />
+          <Name>runtime.native.System.IO.Compression</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Buffers.4.3.0.nupkg</FileName>
+          <Hash>XqZWb4Kd04960h4U9seivjKseGA/YEIpdplfHYHQ9jk=</Hash>
+          <Id>System.Buffers</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Buffers</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.IO.Compression.ZipFile.4.3.0.nupkg</FileName>
+          <Hash>WQl+JgWs+GaRMeiahTFUbrhlXIHapzcpTFXbRvAtvvs=</Hash>
+          <Id>System.IO.Compression.ZipFile</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.IO.Compression.ZipFile</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Linq.Expressions.4.3.0.nupkg</FileName>
+          <Hash>+3pvhZY7rip8HCbfdULzjlC9FPZFpYoQxhkcuFm2wk8=</Hash>
+          <Id>System.Linq.Expressions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Linq.Expressions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.ObjectModel.4.3.0.nupkg</FileName>
+          <Hash>gtmRkWP2Kwr3nHtDh0yYtce38z1wrGzb6fjm4v8wN6Q=</Hash>
+          <Id>System.ObjectModel</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.ObjectModel</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Emit.4.3.0.nupkg</FileName>
+          <Hash>5LhkDmhy2FkSxulXR+bsTtMzdU3VyyuZzsxp7/DwyIU=</Hash>
+          <Id>System.Reflection.Emit</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Emit</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Emit.ILGeneration.4.3.0.nupkg</FileName>
+          <Hash>mKRknEHNls4gkRwrEgi39B+vSaAz/Gt3IALtS98xNnA=</Hash>
+          <Id>System.Reflection.Emit.ILGeneration</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Emit.ILGeneration</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Reflection.Emit.Lightweight.4.3.0.nupkg</FileName>
+          <Hash>rKx4a9yZKcajloSZHr4CKTVJ6Vjh95ni+zszPxWjh2I=</Hash>
+          <Id>System.Reflection.Emit.Lightweight</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Reflection.Emit.Lightweight</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.Http.4.3.0.nupkg</FileName>
+          <Hash>UoBB7WPDp2Bne/fwxKF0nE8grJ6FzTMXdT/jfsphj8Q=</Hash>
+          <Id>System.Net.Http</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.Http</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.DiagnosticSource.4.3.0.nupkg</FileName>
+          <Hash>OFJRb0ygep0Z3yDBLwAgM/Tkfs4JCDtsNhwDH9cd1Xw=</Hash>
+          <Id>System.Diagnostics.DiagnosticSource</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.DiagnosticSource</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg</FileName>
+          <Hash>MYpl6/ZyC6hjmzWRIe+iDoldOMW1mfbwXsduAnXIKGA=</Hash>
+          <Id>System.Runtime.InteropServices.RuntimeInformation</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Runtime.InteropServices.RuntimeInformation</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Text.Encoding.Extensions.4.3.0.nupkg</FileName>
+          <Hash>vufHXg8QAKxHlujPHHcrtGwAqFmsCD6HKjfDAiHyAYc=</Hash>
+          <Id>System.Text.Encoding.Extensions</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Text.Encoding.Extensions</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Threading.Timer.4.3.0.nupkg</FileName>
+          <Hash>pmhslmhQhP32TWbBzoITLZ4BoORBqYk25OWbru04p9s=</Hash>
+          <Id>System.Threading.Timer</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Threading.Timer</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Xml.ReaderWriter.4.3.0.nupkg</FileName>
+          <Hash>QQ8KgU0lu4F5Unh+TbechO//zaAGZ4MfgvW72Cn1hzA=</Hash>
+          <Id>System.Xml.ReaderWriter</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Xml.ReaderWriter</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Xml.XDocument.4.3.0.nupkg</FileName>
+          <Hash>rWtdcmcuElNOSzCehflyKwHkDRpiOhJJs8CeQ0l1CCI=</Hash>
+          <Id>System.Xml.XDocument</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Xml.XDocument</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Diagnostics.Process.4.3.0.nupkg</FileName>
+          <Hash>Rzo24qXhuJDDgrGNHr2eQRHhwLmsYmWDqAg/P5fOlzw=</Hash>
+          <Id>System.Diagnostics.Process</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Diagnostics.Process</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.Win32.Registry.4.3.0.nupkg</FileName>
+          <Hash>50XwFbyRfZkTD/bBn76WV/NIpOy/mzXD3MMEVFX/vr8=</Hash>
+          <Id>Microsoft.Win32.Registry</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.Win32.Registry</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Net.NameResolution.4.3.0.nupkg</FileName>
+          <Hash>eGZwCBExWsnirWBHyp2sSSSXp6g7I6v53qNmwPgtJ5c=</Hash>
+          <Id>System.Net.NameResolution</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Net.NameResolution</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Data.Common.4.3.0.nupkg</FileName>
+          <Hash>A/chanx/j3654mmIVSDp5TitXOyegUBVpalGOPw+lIk=</Hash>
+          <Id>System.Data.Common</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Data.Common</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.EntityFrameworkCore.Relational.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>evflBSGb/0fNIldq7FeLvW/hae96x45nVzLjjkusFxA=</Hash>
+          <Id>Microsoft.EntityFrameworkCore.Relational</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.EntityFrameworkCore.Relational</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.CSharp.4.3.0.nupkg</FileName>
+          <Hash>a3dAiPaVuky0wpcHmpTVtAQJNGZ2v91/oArA+dpJgj8=</Hash>
+          <Id>Microsoft.CSharp</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.CSharp</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>System.Dynamic.Runtime.4.3.0.nupkg</FileName>
+          <Hash>k75gjOYimIQtLBD5NDzwwi3ZMUBPRW3jmc3evDMMJbU=</Hash>
+          <Id>System.Dynamic.Runtime</Id>
+          <MasterUrl i:nil="true" />
+          <Name>System.Dynamic.Runtime</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>4.3.0</Version>
+        </ProjectDependency>
+        <ProjectDependency>
+          <Dependencies i:nil="true" />
+          <FileName>Microsoft.EntityFrameworkCore.Relational.Design.2.0.0-preview1-final.nupkg</FileName>
+          <Hash>iBzUTXgTof664kbF3H+FpYeghvFLIsgSE/Z0r+a2Yjo=</Hash>
+          <Id>Microsoft.EntityFrameworkCore.Relational.Design</Id>
+          <MasterUrl i:nil="true" />
+          <Name>Microsoft.EntityFrameworkCore.Relational.Design</Name>
+          <ServerUrl>nuget.org</ServerUrl>
+          <Version>2.0.0-preview1-final</Version>
+        </ProjectDependency>
+      </Dependencies>
+      <FileName>Npgsql.EntityFrameworkCore.PostgreSQL.Design.2.0.0-preview1.nupkg</FileName>
+      <Hash>u2nHUhW8pQM+s3FGCz6vXcFzaVYa2akjxBnP+OAQ0O8=</Hash>
+      <Id>Npgsql.EntityFrameworkCore.PostgreSQL.Design</Id>
+      <MasterUrl i:nil="true" />
+      <Name>Npgsql.EntityFrameworkCore.PostgreSQL.Design</Name>
+      <ServerUrl>nuget.org</ServerUrl>
+      <Version>2.0.0-preview1</Version>
+    </ProjectDependency>
+  </Dependencies>
+  <Description></Description>
+  <Files>
+    <ProjectFileItem z:Id="i2">
+      <IsMain>true</IsMain>
+      <Path>Main.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i3">
+      <IsMain>false</IsMain>
+      <Path>Data\Config.xlsx</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i4">
+      <IsMain>false</IsMain>
+      <Path>Framework\ApiProductos.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i5">
+      <IsMain>false</IsMain>
+      <Path>Framework\SaveToDatabase.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i6">
+      <IsMain>false</IsMain>
+      <Path>Framework\GenerateExcelReport.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i7">
+      <IsMain>false</IsMain>
+      <Path>Framework\SubmitWebForm.pix</Path>
+    </ProjectFileItem>
+  </Files>
+  <MasterUploadId i:nil="true" />
+  <Name>prueba_tecnica</Name>
+  <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>4</d2p1:_Build>
+    <d2p1:_Major>2</d2p1:_Major>
+    <d2p1:_Minor>27</d2p1:_Minor>
+    <d2p1:_Revision>0</d2p1:_Revision>
+  </PlatformVersion>
+  <ProjectMaterUploadIds i:nil="true" />
+  <ProjectNamespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <d2p1:string>System</d2p1:string>
+    <d2p1:string>System.IO</d2p1:string>
+    <d2p1:string>System.Collections.Generic</d2p1:string>
+    <d2p1:string>System.Linq</d2p1:string>
+    <d2p1:string>System.Data</d2p1:string>
+    <d2p1:string>System.Xml.Linq</d2p1:string>
+    <d2p1:string>System.Net.Http</d2p1:string>
+    <d2p1:string>System.Text.Json</d2p1:string>
+    <d2p1:string>Newtonsoft.Json.Linq</d2p1:string>
+    <d2p1:string>Newtonsoft.Json</d2p1:string>
+    <d2p1:string>Microsoft.Data.Sqlite</d2p1:string>
+    <d2p1:string>Npgsql</d2p1:string>
+  </ProjectNamespaces>
+  <Version xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+    <d2p1:_Build>-1</d2p1:_Build>
+    <d2p1:_Major>1</d2p1:_Major>
+    <d2p1:_Minor>0</d2p1:_Minor>
+    <d2p1:_Revision>-1</d2p1:_Revision>
+  </Version>
+</RobotizationProject>
