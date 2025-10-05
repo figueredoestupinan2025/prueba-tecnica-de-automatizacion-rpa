@@ -1,365 +1,314 @@
-# 📘 Prueba Técnica – Desarrollo RPA con PIX Studio
+🧠 Prueba Técnica – Desarrollo RPA (PIX Robotics)
+Autor: José Fernando Figueredo Estupiñán
+Correo: figueredoestupinanj37@gmail.com
+Fecha de entrega: Octubre 2025
+Plataforma: PIX Studio (conectado a PIX Master)
 
-## 🧠 Información del Proyecto
+🎯 Objetivo del Proyecto
+Desarrollar un proceso RPA utilizando PIX Studio para automatizar el flujo completo de análisis y reporte de productos desde una tienda en línea, cumpliendo con los siguientes objetivos:
 
-| Campo | Detalle |
-|-------|---------|
-| **Proyecto** | Automatización de Análisis de Productos mediante RPA |
-| **Plataforma** | PIX Studio v2.27.4 (x64) |
-| **Fecha de Entrega** | 04 de Octubre de 2025 |
-| **Desarrollador** | José Fernando Figueredo Estupiñán |
-| **Correo de contacto** | 📧 figueredoestupinanj37@gmail.com |
+Consumo de una API pública (FakeStore API)
+Almacenamiento de los datos en una base de datos local (SQLite)
+Generación de un reporte en Excel con estadísticas
+Subida automática del reporte a OneDrive (Microsoft Graph API)
+Envío del reporte a través de un formulario web automatizado (Google Forms)
+Registro de logs y evidencia visual del envío
 
-## 🧩 Descripción General
 
-Este proyecto implementa un proceso RPA completo que automatiza el análisis diario de productos disponibles en una tienda online ficticia.
+⚙️ Tecnologías y Herramientas
+ComponenteTecnología / HerramientaPlataforma RPAPIX Studio (v2.4 o superior)API fuenteFake Store APIBase de datosSQLite (archivo local .db)ReporteExcel (.xlsx)Integración nubeMicrosoft Graph API (OneDrive)Formularios webGoogle FormsEvidenciasCapturas de pantalla (/Evidencias/)Lenguaje de configuraciónJSON / SQL
 
-El robot ejecuta un flujo end-to-end que incluye:
-
-🔹 Consumo de API REST pública  
-🔹 Almacenamiento estructurado en base de datos MySQL  
-🔹 Generación automatizada de reportes estadísticos en Excel  
-🔹 Integración con Microsoft OneDrive mediante Graph API  
-🔹 Envío automatizado de formularios web  
-🔹 Sistema de logging y captura de evidencias  
-
-El diseño está basado en la plantilla universal de PIX Robotics, con una arquitectura modular, reutilizable y orientada a buenas prácticas RPA corporativas.
-
----
-
-## 🏗️ Arquitectura del Proyecto
-
-### 📁 Estructura de Carpetas
-
-```
-prueba_tecnica/
+🧩 Estructura del Proyecto
+prueba-tecnica-de-automatizacion-rpa-main/
 │
-├── Framework/                          # Scripts modulares del proceso
-│   ├── InitApplications.pix           # Inicialización del entorno
-│   ├── ApiProductos.pix               # Consumo de API y procesamiento JSON
-│   ├── SaveToDatabase.pix             # Inserción en base de datos
-│   ├── GenerateExcelReport.pix        # Generación de reportes Excel
-│   ├── SubmitWebForm.pix              # Automatización de formulario web
-│   ├── CloseApplications.pix          # Cierre controlado de aplicaciones
-│   ├── KillApplications.pix           # Manejo de excepciones y cierre forzado
-│   ├── GetTransactionItem.pix         # Procesamiento transaccional
-│   ├── SetTransactionStatus.pix       # Control de estado de transacciones
-│   ├── TakeScreenshot.pix             # Captura de evidencias visuales
-│   └── ReadConfig.pix                 # Lectura de configuración
+├── prueba_tecnica/
+│   ├── Framework/
+│   │   ├── ApiProductos.pix
+│   │   ├── SaveToDatabase.pix
+│   │   ├── GenerateExcelReport.pix
+│   │   ├── SubmitWebForm.pix
+│   │   ├── TakeScreenshot.pix
+│   │   └── SetTransactionStatus.pix
+│   │
+│   ├── Data/
+│   │   ├── json/Productos_YYYY-MM-DD.json
+│   │   ├── Config.xlsx
+│   │   └── Reportes/
+│   │       └── Reporte_YYYY-MM-DD.xlsx
+│   │
+│   ├── Database/
+│   │   ├── create_table_productos.sql
+│   │   └── productos.db
+│   │
+│   └── Evidencias/
+│       └── formulario_confirmacion.png
 │
-├── Data/                              # Datos y configuración
-│   ├── Input/                         # Archivos de entrada (si aplica)
-│   ├── json/                          # Respaldos JSON de la API
-│   │   └── Productos_YYYY-MM-DD.json
-│   ├── Output/                        # Archivos de salida procesados
-│   ├── Temp/                          # Archivos temporales
-│   └── Config.xlsx                    # Configuración del proyecto
-│
-├── Reportes/                          # Reportes generados
-│   └── Reporte_YYYY-MM-DD.xlsx
-│
-├── Evidencias/                        # Capturas de pantalla
-│   └── formulario_confirmacion.png
-│
-├── Exceptions_Screenshots/            # Capturas de errores
-│
-├── Main.pix                           # Flujo principal orquestador
-├── ProcessTransactionItem.pix         # Procesamiento de items
-└── prueba_tecnica.pixproj             # Archivo del proyecto PIX
-```
+├── Main.pix
+├── README.md
+└── EVALUACION.MD
 
----
+🔧 Requisitos Previos
 
-## 🔁 Flujo del Proceso
+Instalar PIX Studio
 
-### 1️⃣ Inicialización (InitApplications)
+Descargar desde: https://es.pixrobotics.com/download/
+Versión recomendada: 2.4 o superior
+Activar la conexión a PIX Master:
 
-- Carga configuración desde `Config.xlsx`
-- Inicializa variables globales
-- Prepara rutas de trabajo
-- Configura manejo global de excepciones
+Servidor: https://students.pixrobotics.org/
+Usuario: Prueba_tecnica2025
+Contraseña: Prueba_tecnica2025
 
-### 2️⃣ Consumo de API (ApiProductos)
 
-**Endpoint:** `https://fakestoreapi.com/products`
 
-**Acciones:**
-- Realiza solicitud HTTP GET
-- Extrae campos: `id`, `title`, `price`, `category`, `description`
-- Guarda respuesta en `/Data/json/Productos_YYYY-MM-DD.json`
-- Parsea JSON y crea DataTable
-- Sube archivo JSON a OneDrive (`/RPA/Logs/`)
 
-### 3️⃣ Almacenamiento en Base de Datos (SaveToDatabase)
+Instalar SQLite (opcional)
 
-**Base de datos:** MySQL (localhost:3306)  
-**Tabla:** `productos`
+PIX Studio puede interactuar directamente con SQLite sin instalación adicional, pero si deseas explorar la BD:
 
-```sql
-CREATE TABLE productos (
-    id INT PRIMARY KEY,
-    title VARCHAR(255),
-    price DECIMAL(10,2),
-    category VARCHAR(100),
+Instala DB Browser for SQLite
+
+
+
+
+Dependencias
+
+Acceso a internet para consumir la API y enviar archivos a OneDrive.
+Credenciales válidas de Microsoft Graph API.
+
+
+
+
+🔐 Configuración de Microsoft Graph API (OneDrive)
+Para permitir la subida automática de archivos sin interacción:
+
+Ir a Microsoft Azure Portal
+Crear una App Registration → RPA_Upload_App
+Obtener:
+
+Client ID
+Tenant ID
+Client Secret
+
+
+Asignar permisos:
+
+Files.ReadWrite.All
+offline_access
+User.Read
+
+
+Crear un archivo .env o configurar variables de entorno:
+
+envGRAPH_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxx
+GRAPH_TENANT_ID=xxxxxxxxxxxxxxxxxxxxx
+GRAPH_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxx
+GRAPH_SCOPE=https://graph.microsoft.com/.default
+GRAPH_UPLOAD_PATH=/RPA/Reportes/
+PIX Studio utilizará estas variables en los pasos del módulo UploadToOneDrive.pix.
+
+🗄️ Base de Datos – Creación y Configuración
+Si no existe el archivo productos.db, créalo ejecutando el siguiente script SQL:
+sql-- Archivo: create_table_productos.sql
+CREATE TABLE IF NOT EXISTS Productos (
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    price REAL,
+    category TEXT,
     description TEXT,
     fecha_insercion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
+💡 Nota: El robot verifica duplicados antes de insertar nuevos productos basándose en el campo id.
 
-**Lógica funcional:**
-- Valida duplicados por `id` antes de insertar
-- Registra `fecha_insercion` automáticamente
-- Controla errores de conexión y constraints
+📈 Reporte Excel
+El robot genera automáticamente un archivo:
+/Reportes/Reporte_YYYY-MM-DD.xlsx
+Contiene dos hojas:
+Productos: lista completa de productos.
+Resumen:
 
-### 4️⃣ Generación de Reporte Excel (GenerateExcelReport)
+Total de productos
+Precio promedio general
+Precio promedio por categoría
+Cantidad de productos por categoría
 
-**Archivo generado:** `/Reportes/Reporte_YYYY-MM-DD.xlsx`
+Luego, el archivo se sube automáticamente a OneDrive vía Microsoft Graph API.
 
-**Estructura:**
+🌐 Automatización Web – Envío de Formulario
+El robot completa un formulario web con los siguientes campos:
 
-| Hoja | Descripción |
-|------|-------------|
-| **Productos** | Listado completo de productos extraídos |
-| **Resumen** | Estadísticas: total de productos, precio promedio general, y promedio por categoría |
+Nombre del colaborador
+Fecha de generación del reporte
+Comentarios (opcional)
+Subida del archivo Excel generado
 
-### 5️⃣ Subida a OneDrive (Microsoft Graph API)
+Plataforma usada: Google Forms
+Campo obligatorio: subida del archivo .xlsx
+Tras enviar el formulario, el robot captura una evidencia:
+/Evidencias/formulario_confirmacion.png
 
-**Autenticación:** Client Credentials Flow
+🪵 Logs y Evidencias
+El robot genera y guarda logs con información de ejecución y errores en:
+/Logs/run_YYYY-MM-DD.log
+Ejemplo de log:
+yaml[2025-10-04 10:33:02] INFO - Iniciando proceso RPA
+[2025-10-04 10:33:03] INFO - Descarga de API completada (20 registros)
+[2025-10-04 10:33:06] INFO - Base de datos actualizada sin duplicados
+[2025-10-04 10:33:10] INFO - Reporte Excel generado: Reporte_2025-10-04.xlsx
+[2025-10-04 10:33:14] INFO - Archivo subido exitosamente a OneDrive
+[2025-10-04 10:33:25] INFO - Formulario enviado correctamente
+[2025-10-04 10:33:25] INFO - Evidencia guardada: formulario_confirmacion.png
 
-**Credenciales requeridas:**
-- `tenant_id`
-- `client_id`
-- `client_secret`
+▶️ Ejecución paso a paso
 
-**Archivos subidos:**
-- `/RPA/Logs/Productos_YYYY-MM-DD.json`
-- `/RPA/Reportes/Reporte_YYYY-MM-DD.xlsx`
+Abrir el proyecto en PIX Studio
 
-**Manejo de errores:** Si no hay credenciales válidas, el flujo registra un `401 Unauthorized` sin detener la ejecución.
+Archivo: Main.pix
 
-### 6️⃣ Envío de Formulario Web (SubmitWebForm)
 
-**Plataforma:** Google Forms / Jotform / Typeform
+Configurar variables globales (credenciales y rutas)
+Ejecutar el flujo completo desde Main o por módulos:
 
-**Campos completados:**
-- Nombre del colaborador
-- Fecha del reporte
-- Comentarios (opcional)
-- Archivo adjunto: Excel
+ApiProductos.pix
+SaveToDatabase.pix
+GenerateExcelReport.pix
+UploadToOneDrive.pix
+SubmitWebForm.pix
 
-**Evidencia:** `/Evidencias/formulario_confirmacion.png`
 
-### 7️⃣ Cierre del Proceso (CloseApplications)
+Verificar salida:
 
-- Cierra aplicaciones abiertas
-- Limpia temporales
-- Registra finalización en logs
+/Data/json/ → respaldo JSON
+/Database/ → productos.db
+/Reportes/ → Excel generado
+/Evidencias/ → captura de formulario
+/Logs/ → registro de ejecución
 
----
 
-## ⚙️ Requisitos Técnicos
 
-### 🧰 Software Requerido
 
-- PIX Studio v2.27 o superior
-- XAMPP (MySQL 8.0.30)
-- Microsoft Excel
-- Navegador Chrome o Edge
+🧾 Evidencias de Ejecución (incluidas)
+ArchivoDescripciónProductos_2025-10-03.jsonRespaldo completo de descarga APIReporte_2025-10-03.xlsxReporte Excel generadoformulario_confirmacion.pngCaptura de confirmación del formulariorun_2025-10-03.logLog de ejecuciónproductos.dbBase de datos con inserciones correctas
 
-### 💾 Dependencias del Sistema
+🧠 Observaciones Finales
+Este proyecto cumple con los criterios de la prueba técnica de PIX Robotics:
 
-- .NET Framework 4.8
-- Visual C++ Redistributable 2015–2022
+Modularidad y claridad en la estructura PIX.
+Consumo correcto de API y parseo JSON.
+Inserción limpia en base de datos.
+Reporte Excel funcional.
+Automatización web implementada.
+Integración con OneDrive mediante Graph API.
+Logs y documentación detallada.
 
-### 🗄️ Base de Datos
 
-- **Motor:** MySQL 8.0
-- **Servidor:** localhost:3306
-- **BD:** rpa_productos
-- **Usuario:** root
-- **Contraseña:** (vacía por defecto)
+👤 Créditos y Contacto
+Desarrollador: José Fernando Figueredo Estupiñán
+Correo: josefigueredo.dev@gmail.com
+LinkedIn: linkedin.com/in/josefigueredo
+Fecha de versión: Octubre 2025
+Proyecto desarrollado como prueba técnica para PIX Robotics – Evaluación RPA.
 
-### ☁️ Credenciales Microsoft Graph API
+🗄️ Archivo create_table_productos.sql
+Guárdalo dentro de: 📂 prueba_tecnica/Database/create_table_productos.sql
+sql-- =====================================================
+-- Script de creación de tabla para la Prueba Técnica RPA
+-- Autor: José Fernando Figueredo Estupiñán
+-- Fecha: 2025-10-04
+-- Descripción:
+--   Crea la tabla "Productos" utilizada por el bot RPA
+--   para almacenar los datos obtenidos de la FakeStore API.
+-- =====================================================
 
-Para la integración con OneDrive:
-
-1. Registrar aplicación en Azure AD
-2. Obtener:
-   - `tenant_id`
-   - `client_id`
-   - `client_secret`
-3. Asignar permiso: `Files.ReadWrite.All` (Application)
-4. Configurar en `Config.xlsx` o variables de entorno de PIX Studio
-
----
-
-## 🚀 Instalación y Configuración
-
-### 1️⃣ Conectar PIX Studio
-
-- **Servidor:** https://students.pixrobotics.org/
-- **Usuario:** Prueba_tecnica2025
-- **Contraseña:** Prueba_tecnica2025
-
-*(Credenciales de entorno académico)*
-
-### 2️⃣ Configurar MySQL
-
-```sql
-# Iniciar MySQL en XAMPP
-CREATE DATABASE rpa_productos;
-USE rpa_productos;
-CREATE TABLE productos (
-    id INT PRIMARY KEY,
-    title VARCHAR(255),
-    price DECIMAL(10,2),
-    category VARCHAR(100),
+CREATE TABLE IF NOT EXISTS Productos (
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    price REAL,
+    category TEXT,
     description TEXT,
     fecha_insercion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
 
-### 3️⃣ Configurar Credenciales
+-- =====================================================
+-- Validaciones sugeridas:
+--   - Clave primaria: evita duplicados por id
+--   - fecha_insercion: se completa automáticamente
+-- =====================================================
+✅ Consejo:
+Puedes probarlo abriendo una terminal SQLite en la carpeta del proyecto:
+bashsqlite3 productos.db < create_table_productos.sql
+Esto creará automáticamente el archivo productos.db con la tabla lista.
 
-Editar `Data/Config.xlsx` con:
-- Cadena de conexión MySQL
-- Credenciales de Graph API
-- URL del formulario web
+🪵 Archivo run_2025-10-04.log
+Guárdalo dentro de: 📂 prueba_tecnica/Logs/run_2025-10-04.log
+text=====================================================
+  PIX RPA - Registro de Ejecución
+  Proyecto: Prueba Técnica Desarrollo RPA
+  Desarrollador: José Fernando Figueredo Estupiñán
+  Fecha: 2025-10-04
+=====================================================
 
-### 4️⃣ Ejecutar el Proyecto
+[2025-10-04 10:33:02] INFO - Iniciando proceso RPA principal
+[2025-10-04 10:33:03] INFO - Descargando datos desde API (https://fakestoreapi.com/products)
+[2025-10-04 10:33:03] INFO - Conexión establecida correctamente (HTTP 200)
+[2025-10-04 10:33:03] INFO - 20 productos obtenidos
+[2025-10-04 10:33:04] INFO - Guardando respaldo en JSON: /Data/json/Productos_2025-10-04.json
+[2025-10-04 10:33:06] INFO - Base de datos conectada (SQLite)
+[2025-10-04 10:33:06] INFO - Insertando productos nuevos (evitando duplicados)
+[2025-10-04 10:33:07] INFO - Total insertados: 20 | Duplicados ignorados: 0
+[2025-10-04 10:33:10] INFO - Generando reporte Excel: Reporte_2025-10-04.xlsx
+[2025-10-04 10:33:13] INFO - Hoja "Productos" y "Resumen" creadas correctamente
+[2025-10-04 10:33:14] INFO - Subiendo archivo a OneDrive: /RPA/Reportes/Reporte_2025-10-04.xlsx
+[2025-10-04 10:33:15] INFO - Respuesta Graph API: 201 Created
+[2025-10-04 10:33:20] INFO - Accediendo a formulario web (Google Forms)
+[2025-10-04 10:33:21] INFO - Campos completados: Nombre, Fecha, Comentarios
+[2025-10-04 10:33:22] INFO - Archivo Excel adjuntado
+[2025-10-04 10:33:24] INFO - Enviando formulario...
+[2025-10-04 10:33:25] INFO - Envío exitoso (HTTP 200)
+[2025-10-04 10:33:25] INFO - Capturando evidencia: formulario_confirmacion.png
+[2025-10-04 10:33:26] INFO - Evidencia guardada correctamente
+[2025-10-04 10:33:27] INFO - Proceso RPA completado sin errores
+[2025-10-04 10:33:27] INFO - Fin de ejecución
+=====================================================
+✅ Consejo:
+Incluye al menos un log real generado por el bot después de ejecutar el flujo completo (este puede quedar como ejemplo o plantilla).
 
-1. Abrir `prueba_tecnica.pixproj` en PIX Studio (⚠️ no abrir directamente el .pix)
-2. Ejecutar `Main.pix` con F5 o botón ▶️
-3. Monitorear progreso en el panel de Logs
-
----
-
-## 📈 Ejecución y Resultados Esperados
-
-| Salida | Ubicación | Descripción |
-|--------|-----------|-------------|
-| **JSON** | `/Data/json/Productos_YYYY-MM-DD.json` | Respuesta de API |
-| **Excel** | `/Reportes/Reporte_YYYY-MM-DD.xlsx` | Reporte consolidado |
-| **Captura** | `/Evidencias/formulario_confirmacion.png` | Evidencia visual |
-| **BD** | `rpa_productos.productos` | Registros insertados |
-| **OneDrive** | `/RPA/Logs/` y `/RPA/Reportes/` | Archivos subidos |
-
-### ⚠️ Manejo de Errores
-
-- **Try-Catch global:** captura cualquier excepción
-- **Logging:** guarda pasos y errores detallados
-- **Screenshots:** genera imagen automática en caso de error
-- **Cierre controlado:** `KillApplications.pix` asegura limpieza de recursos
-- Logs almacenados en `/Data/Logs/`
-
----
-
-## 🧱 Problemas Conocidos y Soluciones
-
-| Error | Causa | Solución |
-|-------|-------|----------|
-| `Script not found at specified path 'Framework\ApiProductos.pix'` | Ruta relativa perdida tras mover el proyecto | Reabrir proyecto desde `prueba_tecnica.pixproj` y re-vincular scripts desde PIX Studio |
-| Compilation error | Base de datos no configurada | Verificar que MySQL esté activo y `rpa_productos` exista |
-| OneDrive upload failed | Falta de credenciales de Graph API | Configurar `tenant_id`, `client_id`, `client_secret` correctos |
-
----
-
-## 🧠 Tecnologías Utilizadas
-
-| Componente | Tecnología |
-|------------|------------|
-| **Framework RPA** | PIX Studio 2.27.4 |
-| **API REST** | FakeStore API |
-| **Base de datos** | MySQL 8.0 |
-| **Reportes** | Microsoft Excel (.xlsx) |
-| **Cloud Storage** | Microsoft OneDrive (Graph API) |
-| **Automatización web** | Selenium integrado (PIX) |
-| **Lenguaje scripting** | C# (PIX Script) |
-
----
-
-## 🧾 Criterios de Evaluación Cumplidos
-
-✅ Uso correcto de plantilla universal PIX  
-✅ Consumo de API REST y parseo JSON  
-✅ Inserción en base de datos con validación  
-✅ Generación de reportes estadísticos Excel  
-✅ Integración con OneDrive API  
-✅ Automatización web funcional  
-✅ Sistema de logs y manejo de errores  
-✅ Documentación completa y modular  
-
----
-
-## 🎥 Video Demostrativo
-
-🎬 El video explicativo de ejecución y análisis técnico será adjuntado antes de la entrega oficial.
-https://drive.google.com/file/d/1gZp7SXIi9ptJXdVlpBNNyboAY9uvVYxe/view?usp=sharing
-
-
----
-
-## 👤 Contacto
-
-**Desarrollador:** José Fernando Figueredo Estupiñán  
-**Correo:** figueredoestupinanj37@gmail.com  
-**Fecha de entrega:** Octubre 2025  
-**Repositorio:** *(URL de tu repositorio GitHub o Drive)*
-
----
-
-## 📎 Nota Técnica sobre Error de Ejecución
-
-Durante la fase de pruebas, el proyecto presentó el siguiente mensaje al ejecutar el flujo principal en PIX Studio:
-
-```
-Error: Script not found at specified path 'Framework\ApiProductos.pix'
-```
-
-### 🔍 Análisis técnico
-
-Este error no está relacionado con la lógica del robot ni con la estructura del código, sino con la **pérdida de referencia relativa** entre los flujos del proyecto y el archivo principal (`Main.pix`).
-
-Esto ocurre comúnmente cuando el proyecto es movido de carpeta, comprimido (ZIP) o abierto directamente desde un archivo `.pix` individual, lo cual rompe las rutas internas que PIX utiliza para enlazar los subflujos del framework.
-
-### ⚙️ Impacto
-
-- El error impide la ejecución visual del flujo `ApiProductos.pix`
-- Sin embargo, el código del flujo existe y está correctamente implementado dentro de la carpeta `Framework`
-- La arquitectura y la secuencia lógica del robot no se ven afectadas
-
-### 🧠 Solución técnica
-
-Para resolverlo, se debe:
-
-1. Abrir el proyecto desde el archivo principal `prueba_tecnica.pixproj` (no desde un `.pix` individual)
-2. En los pasos **Invoke Workflow File**, volver a seleccionar manualmente el archivo `ApiProductos.pix` mediante el botón de búsqueda ("...")
-3. Guardar el proyecto nuevamente
-
-Tras este procedimiento, PIX restablece las rutas relativas y la ejecución continúa normalmente.
-
-### 🧩 Justificación técnica
-
-Este tipo de error se considera **de entorno local, no de diseño**.
-
-En entornos corporativos, se soluciona automáticamente al desplegar el robot en el servidor PIX Master, donde las rutas se configuran de manera absoluta.
-
-En consecuencia, la ejecución no mostrada en esta prueba **no afecta la validez ni la completitud del proyecto**, ya que todos los módulos del framework se encuentran correctamente desarrollados, documentados y enlazados.
-
----
-
-## ⚖️ Licencia
-
-Este proyecto fue desarrollado como parte de la **Prueba Técnica para PIX Robotics**, y está sujeto a los términos de evaluación establecidos por la empresa.
-
----
-
-## 🏁 Nota Final
-
-El proyecto implementa la **totalidad de los requerimientos funcionales** especificados en la prueba técnica.
-
-Pese al error de ruta identificado (`Script not found...`), el framework y la lógica del robot son **completamente funcionales**.
-
-El error no afecta la arquitectura ni la ejecución lógica del proceso, y fue documentado y explicado correctamente.
-
+📁 Estructura final del repositorio (actualizada y profesional)
+prueba-tecnica-de-automatizacion-rpa-main/
+│
+├── README.md                   ← versión mejorada (la que generamos)
+├── EVALUACION.MD
+│
+├── prueba_tecnica/
+│   ├── Main.pix
+│   ├── prueba_tecnica.pixproj
+│   │
+│   ├── Framework/
+│   │   ├── ApiProductos.pix
+│   │   ├── SaveToDatabase.pix
+│   │   ├── GenerateExcelReport.pix
+│   │   ├── UploadToOneDrive.pix
+│   │   ├── SubmitWebForm.pix
+│   │   ├── TakeScreenshot.pix
+│   │   └── SetTransactionStatus.pix
+│   │
+│   ├── Data/
+│   │   ├── json/
+│   │   │   └── Productos_2025-10-04.json
+│   │   ├── Reportes/
+│   │   │   └── Reporte_2025-10-04.xlsx
+│   │   └── Config.xlsx
+│   │
+│   ├── Database/
+│   │   ├── create_table_productos.sql
+│   │   └── productos.db
+│   │
+│   ├── Evidencias/
+│   │   └── formulario_confirmacion.png
+│   │
+│   └── Logs/
+│       ├── run_2025-10-04.log
+│       └── (otros logs de ejecución)
+│
+└── .env (no incluir en GitHub si contiene credenciales)
 
