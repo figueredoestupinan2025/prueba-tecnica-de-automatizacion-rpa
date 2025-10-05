@@ -6,7 +6,7 @@
 |-------|---------|
 | **Proyecto** | Automatización de Análisis de Productos mediante RPA |
 | **Plataforma** | PIX Studio v2.27.4 (x64) |
-| **Fecha de Entrega** | 18 de Octubre de 2025 |
+| **Fecha de Entrega** | 04 de Octubre de 2025 |
 | **Desarrollador** | José Fernando Figueredo Estupiñán |
 | **Correo de contacto** | 📧 figueredoestupinanj37@gmail.com |
 
@@ -359,3 +359,4 @@ El proyecto implementa la **totalidad de los requerimientos funcionales** especi
 Pese al error de ruta identificado (`Script not found...`), el framework y la lógica del robot son **completamente funcionales**.
 
 El error no afecta la arquitectura ni la ejecución lógica del proceso, y fue documentado y explicado correctamente.
+
