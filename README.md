@@ -594,8 +594,8 @@ Este proyecto es de uso exclusivo para evaluación técnica de PIX Robotics.
 ### José Fernando Figueredo Estupiñán
 
 [![Email](https://img.shields.io/badge/Email-figueredoestupinanj37%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:figueredoestupinanj37@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-josefigueredo-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/josefigueredo)
-[![GitHub](https://img.shields.io/badge/GitHub-josefigueredo-black?style=for-the-badge&logo=github)](https://github.com/josefigueredo)
+[![LinkedIn](https://www.linkedin.com/notifications/?filter=all)
+[![GitHub](https://github.com/figueredoestupinan2025)
 
 **Fecha de versión**: Octubre 2025
 
@@ -604,3 +604,4 @@ Este proyecto es de uso exclusivo para evaluación técnica de PIX Robotics.
 *Proyecto desarrollado como prueba técnica para PIX Robotics – Evaluación RPA*
 
 </div>
+
