@@ -294,6 +294,8 @@ Editar `Data/Config.xlsx` con:
 ## 🎥 Video Demostrativo
 
 🎬 El video explicativo de ejecución y análisis técnico será adjuntado antes de la entrega oficial.
+https://drive.google.com/file/d/1gZp7SXIi9ptJXdVlpBNNyboAY9uvVYxe/view?usp=sharing
+
 
 ---
 
@@ -359,4 +361,5 @@ El proyecto implementa la **totalidad de los requerimientos funcionales** especi
 Pese al error de ruta identificado (`Script not found...`), el framework y la lógica del robot son **completamente funcionales**.
 
 El error no afecta la arquitectura ni la ejecución lógica del proceso, y fue documentado y explicado correctamente.
+
 
